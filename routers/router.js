@@ -1,11 +1,9 @@
 const express = require("express");
-
+const db = require("./model");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  const races = ["human", "elf", "hobbit", "wizard", "dwarf", "orc"];
-
-  res.status(200).json(races);
+  db.find().then((todo) => res.status(200).json(todo));
 });
 
 module.exports = router;
