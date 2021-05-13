@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/janecyyu/challenge-todo-api#readme",
   "dependencies": {
+    "dotenv": "^9.0.2",
     "express": "^4.17.1"
   },
   "devDependencies": {

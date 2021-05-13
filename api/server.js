@@ -1,8 +1,8 @@
 const express = require("express");
-const resultRouter = require("../results/resultRouter.js");
+const router = require("../routers/router");
 const server = express();
 
 server.use(express.json());
-server.use("/", resultRouter);
+server.use("/", router);
 
 module.exports = server;
