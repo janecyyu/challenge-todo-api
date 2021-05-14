@@ -3,6 +3,7 @@ const db = require("./model");
 const router = express.Router();
 
 router.get("/", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   db.find().then((todo) => res.status(200).json(todo));
 });
 
